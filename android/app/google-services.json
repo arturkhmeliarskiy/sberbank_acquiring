@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "652625150875",
+    "project_id": "migrantassistant-273ca",
+    "storage_bucket": "migrantassistant-273ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652625150875:android:d2d0404cc0117ecc6e573e",
+        "android_client_info": {
+          "package_name": "com.example.migrant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652625150875-rpl1iv717s9i41070v02eompjulfjb3c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.migrant",
+            "certificate_hash": "affb32dfe9280bcf8182a73d77b66c093eb684bd"
+          }
+        },
+        {
+          "client_id": "652625150875-g4i3630ptnfbcfpp6l2ksuelsgnk5gs6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4khECwCJ9A27b8pDtqNO69xKACRHcbs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652625150875-g4i3630ptnfbcfpp6l2ksuelsgnk5gs6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "652625150875-s0kler0ql52v443rhegqte6fq33pvf6q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.migrant"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

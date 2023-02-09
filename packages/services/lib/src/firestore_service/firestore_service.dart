@@ -1,0 +1,40 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:shared/shared.dart';
+
+class FirestoreService {
+  final SharedPreferencesService sharedPreferencesService;
+
+  FirestoreService(this.sharedPreferencesService);
+
+  Future<List<DocumentSnapshot>> getInfoFireStore(
+      String pathCollection, int limit, String textSearch) async {
+    FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+    List<DocumentSnapshot> result = [];
+    QuerySnapshot? response;
+    if (textSearch.isNotEmpty) {
+      response = await firebaseFirestore
+          .collection(pathCollection)
+          .limit(limit)
+          .where(FirestoreConstants.nickName, isEqualTo: textSearch)
+          .get();
+
+      result = response.docs;
+    } else {
+      response =
+          await firebaseFirestore.collection(pathCollection).limit(limit).get();
+
+      result = response.docs;
+    }
+
+    return result;
+  }
+
+  Future<void> updateDataFirestore(
+      String collectionPath, String path, Map<String, dynamic> dataNeedUpdate) {
+    FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+    return firebaseFirestore
+        .collection(collectionPath)
+        .doc(path)
+        .update(dataNeedUpdate);
+  }
+}
